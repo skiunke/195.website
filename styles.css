@@ -1,0 +1,283 @@
+/* Import Restaurant Colors (CSS Variables) */
+:root {
+    --light-primary: #E91E63;
+    --light-secondary: #FFC107;
+    --light-background: #FFFFFF;
+    --light-surface: #F3F3F3;
+    --light-on-primary: #FFFFFF;
+    --light-on-secondary: #212121;
+    --light-on-background: #212121;
+    --light-on-surface: #424242;
+    --light-error: #B00020;
+    --success: #4CAF50;
+    --warning: #FF9800;
+    --divider: #BDBDBD;
+    --transparent: transparent;
+}
+
+/* Basic Reset and Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: var(--light-background);
+    color: var(--light-on-background);
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--light-primary);
+    color: var(--light-on-primary);
+    padding: 20px 0;
+    position: relative; /* For development notice positioning */
+}
+
+header .container h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Development Notice */
+header .development-notice {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: var(--warning); /* Use warning color for notice */
+    color: var(--light-on-secondary);
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+
+/* Hero Section - (Minor text change for buttons) */
+#hero {
+    padding: 60px 0;
+}
+
+#hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#hero .hero-content {
+    flex: 1;
+    padding-right: 30px;
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    color: var(--light-primary); /* Vibrant pink for headline */
+}
+
+#hero .tagline {
+    font-size: 1.2em;
+    color: var(--light-on-background);
+}
+
+#hero .hero-buttons .button {
+    margin-right: 10px;
+}
+
+#hero .hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+#hero .hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: Rounded corners for image */
+}
+
+
+/* Features Section - (Minor text changes in descriptions and added more icons in html) */
+#features {
+    background-color: var(--light-surface); /* Light grey background for features */
+    padding: 60px 0;
+}
+
+#features h2 {
+    text-align: center;
+    color: var(--light-primary); /* Vibrant pink for section title */
+    margin-bottom: 40px;
+}
+
+#features .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+#features .feature-item {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--light-background); /* White boxes for feature items */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+#features .feature-item img {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+#features .feature-item h3 {
+    color: var(--light-on-background);
+}
+
+#features .feature-item p {
+    color: var(--light-on-surface);
+}
+
+/* CTA Section - (Added input and form styling) */
+#cta {
+    background-color: var(--light-secondary); /* Warm yellow for CTA background */
+    color: var(--light-on-secondary); /* Dark text on yellow */
+    padding: 60px 0;
+    text-align: center;
+}
+
+#cta h2 {
+    color: var(--light-on-secondary); /* Dark text on yellow */
+    margin-bottom: 20px;
+}
+
+#cta p {
+    color: var(--light-on-secondary); /* Dark text on yellow */
+    margin-bottom: 30px;
+}
+
+#cta .cta-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#cta .cta-form input[type="email"] {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px 0 0 6px;
+    font-size: 1em;
+}
+
+#cta .cta-form button {
+    border-radius: 0 6px 6px 0;
+}
+
+
+/* Privacy, TOS, Contact Sections */
+#privacy, #tos, #contact {
+    padding: 60px 0;
+    background-color: var(--light-background);
+}
+
+#privacy .container h2, #tos .container h2, #contact .container h2 {
+    color: var(--light-primary);
+    margin-bottom: 30px;
+}
+
+#privacy .container p, #tos .container p, #contact .container p {
+    color: var(--light-on-background);
+}
+
+
+/* Buttons - (No changes needed here) */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--light-on-primary);
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button.primary {
+    background-color: var(--light-primary);
+}
+
+.button.secondary {
+    background-color: var(--light-on-secondary); /* Using light-on-secondary for contrast on yellow */
+    color: var(--light-on-background); /* Ensuring text is visible on dark background */
+}
+
+/* Footer */
+footer {
+    background-color: var(--light-surface); /* Light grey footer */
+    color: var(--light-on-surface); /* Dark grey text on footer */
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid var(--divider); /* Divider line at the top */
+}
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+footer .footer-links li {
+    margin-left: 20px;
+}
+
+footer .footer-links li a {
+    color: var(--light-on-surface);
+    text-decoration: none;
+}
+
+/* Responsive Design - (No changes needed here) */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    #hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #hero .hero-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    #hero h2 {
+        font-size: 2em;
+    }
+
+    #features .features-grid {
+        grid-template-columns: 1fr; /* Stack features on smaller screens */
+    }
+}
